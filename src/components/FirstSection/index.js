@@ -8,17 +8,30 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     padding: '0px 100px',
     marginBottom: 200,
+    [theme.breakpoints.down('sm')]: {
+     marginBottom: 100,
+    },
+    [theme.breakpoints.down('xs')]: {
+     marginBottom: 100,
+     padding: '30px',
+    },
   },
   text: {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
+    [theme.breakpoints.down('sm')]: {
+      marginBottom: 50,
+    },
   },
   title: {
     color: '#FFFFFF',
     fontSize: '40px',
     lineHeight: '75px',
     textTransform: 'uppercase',
+    [theme.breakpoints.down('sm')]: {
+     fontSize: '32px',
+    },
     '& h1': {
       margin: 0,
     },
@@ -31,6 +44,9 @@ const useStyles = makeStyles(theme => ({
       margin: '40px 0px',
       font: 'normal normal 200 18px/30px Montserrat',
       color: '#FFFFFF',
+      [theme.breakpoints.down('xs')]: {
+       fontSize: 14,
+      },
     }
   },
   button: {
@@ -53,6 +69,10 @@ const useStyles = makeStyles(theme => ({
   img: {
     width: '480px',
     height: '550px',
+    [theme.breakpoints.down('xs')]: {
+      width: '280px',
+      height: '350px',
+    },
   },
 }))
 

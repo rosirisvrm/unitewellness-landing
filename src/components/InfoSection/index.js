@@ -9,6 +9,13 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     padding: '0px 100px',
     marginBottom: 200,
+    [theme.breakpoints.down('sm')]: {
+     marginBottom: 100,
+    },
+    [theme.breakpoints.down('xs')]: {
+     marginBottom: 100,
+     padding: '30px',
+    },
   },
   text:{
     display: 'flex',
@@ -20,13 +27,19 @@ const useStyles = makeStyles(theme => ({
       margin: 0,
       color: '#FFFFFF',
       font: 'normal normal 400 40px/50px Montserrat',
+      [theme.breakpoints.down('sm')]: {
+       fontSize: '32px',
+      },
     },
   },
   paragraph: {
     '& p': {
-      font: 'normal normal 200 14px/24px Montserrat',
+      font: 'normal normal 200 18px/24px Montserrat',
       color: '#FFFFFF',
       margin: '25px 0px',
+      [theme.breakpoints.down('xs')]: {
+       fontSize: 14,
+      },
     }
   },
   button: {
@@ -45,10 +58,17 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    [theme.breakpoints.down('sm')]: {
+      marginBottom: 50,
+    },
   },
   img: {
     width: '500px',
     height: '425px',
+    [theme.breakpoints.down('xs')]: {
+      width: '300px',
+      height: '225px',
+    },
   },
 }))
 

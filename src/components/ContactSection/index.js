@@ -8,14 +8,23 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     marginBottom: 100,
     padding: '0px 100px',
+    [theme.breakpoints.down('xs')]: {
+     padding: '30px',
+    },
   },
   leftTitle: {
     display: 'flex',
     width: '50%',
     marginBottom: 40,
+    [theme.breakpoints.down('sm')]: {
+     marginBottom: 20,
+    },
     '& .MuiTypography-subtitle1': {
       font: 'normal normal normal 40px/50px Montserrat',
       color: '#FFFFFF',
+      [theme.breakpoints.down('sm')]: {
+       fontSize: '32px',
+      },
     }
   },
   paragraph: {
@@ -25,6 +34,10 @@ const useStyles = makeStyles(theme => ({
       font: 'normal normal 200 18px/28px Montserrat',
       color: '#FFFFFF',
       margin: '25px 0px',
+      [theme.breakpoints.down('sm')]: {
+       margin: 0,
+       fontSize: 14,
+      },
     }
   },
   toolbar: {
@@ -48,8 +61,6 @@ export default function ContactSection() {
 
   return (
       <Grid container className={classes.content}>
-        <Toolbar id="back-to-bottom-anchor" className={classes.toolbar}/>
-
         <Grid item xs={12} md={6}>
             <div className={classes.leftTitle}>
               <Typography variant='subtitle1'>We can't spell UniteWellness without U</Typography>
@@ -63,6 +74,8 @@ export default function ContactSection() {
               <ContactItem key={index} title={elem.title} text={elem.text} />
             ))}
         </Grid>
+
+        <Toolbar id="back-to-bottom-anchor" className={classes.toolbar}/>
 
         <Grid item xs={12} md={6}>
           <Form />

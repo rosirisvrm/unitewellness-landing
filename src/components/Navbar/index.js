@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Typography, makeStyles, AppBar, Toolbar } from '@material-ui/core'
+import { Button, Typography, makeStyles, AppBar, Toolbar, Grid } from '@material-ui/core'
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Slide from '@material-ui/core/Slide';
 import Fab from '@material-ui/core/Fab';
@@ -10,11 +10,17 @@ import Logo from '../../images/logo-white.png'
 
 const useStyles = makeStyles(theme => ({
   navbar: {
+    [theme.breakpoints.down('sm')]: {
+     marginBottom: 100,
+    },
   },
   appbar: {
     backgroundColor: 'transparent',
     boxShadow: 'none',
     padding: '30px 100px',
+    [theme.breakpoints.down('xs')]: {
+     padding: '30px',
+    },
   },
   toolbar: {
     display: 'flex',
@@ -25,22 +31,38 @@ const useStyles = makeStyles(theme => ({
   barButtons: {
     display: 'flex',
     alignItems: 'center',
+    justifyContent: 'flex-start',
+    [theme.breakpoints.down('xl')]: {
+     justifyContent: 'center',
+    },
     padding: '20px 0px',
     '& .MuiTypography-subtitle1': {
       color: '#FFFFFF',
       cursor: 'pointer',
-      padding: '0px 50px',
+      padding: '0px 40px',
+      [theme.breakpoints.down('md')]: {
+       padding: '0px 10px 0px 0px',
+      },
+      [theme.breakpoints.down('sm')]: {
+       fontSize: 14,
+      },
     },
     '& .MuiButton-contained': {
       backgroundColor: 'transparent',
       color: "#FFFFFF",
       borderRadius: 40,
       border: '2px solid #FFFFFF',
-      padding: '10px 30px'
+      padding: '10px 30px',
+      [theme.breakpoints.down('md')]: {
+       padding: '10px 20px',
+      },
     },
     '& .MuiButton-label': {
       font: 'normal normal normal 14px/24px Montserrat',
       color: "#FFFFFF",
+      [theme.breakpoints.down('xs')]: {
+       fontSize: 10,
+      },
     }
   },
   offset: theme.mixins.toolbar,
@@ -49,6 +71,9 @@ const useStyles = makeStyles(theme => ({
     bottom: theme.spacing(4),
     right: theme.spacing(4),
   },
+  img: {
+    height: 60,
+  }
 }))
 
 function HideOnScroll(props) {
@@ -99,15 +124,17 @@ export default function Navbar(props) {
         <HideOnScroll {...props}>
           <AppBar className={classes.appbar}>
            <Toolbar className={classes.toolbar}>
-              <div className={classes.image}>
-                <img src={Logo} alt="Logo" height='60'/>
-              </div>
-              <div className={classes.barButtons}>
-                <Typography variant='subtitle1'>Fitness</Typography>
-                <Typography variant='subtitle1'>Nutrtion</Typography>
-                <Typography variant='subtitle1'>Life Coaching</Typography>
-                <Button variant="contained">GET STARTED</Button>
-              </div>
+              <Grid container>
+                <Grid item xs={12} md={6}>
+                  <img src={Logo} alt="Logo" className={classes.img}/>
+                </Grid>
+                <Grid item xs={12} md={6} className={classes.barButtons}>
+                  <Typography variant='subtitle1'>Fitness</Typography>
+                  <Typography variant='subtitle1'>Nutrtion</Typography>
+                  <Typography variant='subtitle1'>Life Coaching</Typography>
+                  <Button variant="contained">GET STARTED</Button>
+                </Grid>
+              </Grid>
            </Toolbar>
           </AppBar>
         </HideOnScroll>

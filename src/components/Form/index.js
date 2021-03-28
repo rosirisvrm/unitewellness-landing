@@ -9,6 +9,9 @@ const useStyles = makeStyles(theme => ({
     flexDirection: 'column',
     borderRadius: 30,
     padding: 40,
+    [theme.breakpoints.down('sm')]: {
+     marginTop: 50,
+    },
   },
   title: {
     display: 'flex',
