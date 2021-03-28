@@ -56,7 +56,7 @@ export default function InfoSection({ textFirst, title, text1, text2 }) {
   const classes = useStyles()
 
   return (
-    <div className={classes.content}>
+    <Grid container className={classes.content}>
 
       {!textFirst && (<>
         <Grid item xs={12} md={6} className={classes.image}>
@@ -98,6 +98,6 @@ export default function InfoSection({ textFirst, title, text1, text2 }) {
         </Grid>
       </>)}
 
-    </div>
+    </Grid>
   );
 }

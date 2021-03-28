@@ -1,5 +1,6 @@
 import React from 'react'
-import { Button, Typography, makeStyles, Card, InputBase, FormControl } from '@material-ui/core'
+import { Button, Typography, makeStyles, Card, InputBase, FormControl, TextField } from '@material-ui/core'
+import Autocomplete from '@material-ui/lab/Autocomplete';
 
 const useStyles = makeStyles(theme => ({
   cardForm: {
@@ -40,6 +41,48 @@ const useStyles = makeStyles(theme => ({
   formControl: {
     marginBottom: 30,
   },
+  select: {
+    display: 'flex',
+    flexDirection: 'column',
+    width: '100%',
+    '& label': {
+      font: 'normal normal 300 15px/19px Montserrat',
+      color: '#FFFFFF',
+      marginBottom: '10px'
+    },
+    '& .MuiAutocomplete-root': {
+      width: '100%'
+    },
+    '& .MuiInputBase-root': {
+      color: '#FFFFFF',
+      backgroundColor: theme.palette.primary.main,
+      border: '1px solid #707070',
+      borderRadius: 10,
+      font: 'normal normal 300 15px/19px Montserrat',
+      fontSize: 15,
+      padding: '7px 20px',
+    },
+    '& .MuiAutocomplete-endAdornment': {
+      paddingRight: '10px',
+    },
+    '& .MuiAutocomplete-tag': {
+      display: 'none',
+    },
+    '& .MuiIconButton-root': {
+      color: '#FFFFFF',
+    }
+  },
+  autocomplete: {
+    marginBottom: '10px',
+  },
+  option: {
+    font: 'normal normal 300 12px/19px Montserrat',
+    color: '#312A2A',
+    '&:hover': {
+      backgroundColor: '#E10C33',
+      color: '#FFFFFF',
+    }
+  },
   button: {
     display: 'flex',
     width: '50%',
@@ -69,13 +112,18 @@ export default function Form() {
   });
 
  const handleChange = (event) => {
-   console.log('event name: ', event.target.name);
-   console.log('event value: ', event.target.value);
    setClientInfo({
      ...clientInfo,
      [event.target.name]: event.target.value,
    })
  };
+
+ const [role, setRole] = React.useState({});
+
+ const options = [
+   {label: 'Member', value: '1'},
+   {label: 'Coach', value: '2'},
+ ]
 
   return (
     <Card className={classes.cardForm}>
@@ -119,9 +167,31 @@ export default function Form() {
             value={clientInfo.cellphone} onChange={handleChange}
           />
        </FormControl>
-       <div className={classes.button}>
-         <Button variant="contained">SEND</Button>
-       </div>
+      </div>
+      <div className={classes.select}>
+        <FormControl className={classes.formControl}>
+          <label htmlFor="role">"Future Member" or "Future Coach"</label>
+          <Autocomplete
+            className={classes.autocomplete}
+            classes={{
+                option: classes.option
+            }}
+            value={role}
+            onChange={(event, newValue) => {
+              setRole(newValue);
+            }}
+            getOptionLabel={(option) => option.label}
+            disableClearable
+            id="role"
+            options={options}
+            renderInput={(params) =>
+              <TextField {...params} placeholder="Select" variant='filled' />
+            }
+          />
+        </FormControl>
+      </div>
+      <div className={classes.button}>
+        <Button variant="contained">SEND</Button>
       </div>
     </Card>
   );

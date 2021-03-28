@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button, makeStyles, Grid } from '@material-ui/core'
+
 import Phones from '../../images/phones.png'
 
 const useStyles = makeStyles(theme => ({
@@ -55,11 +56,30 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-export default function FirstSection() {
+function ScrollBottom(props) {
+  const { children } = props;
+  const classes = useStyles();
+
+  const handleClick = (event) => {
+    const anchor = (event.target.ownerDocument || document).querySelector('#back-to-bottom-anchor');
+
+    if (anchor) {
+      anchor.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  };
+
+  return (
+    <div onClick={handleClick} className={classes.button}>
+      {children}
+    </div>
+  );
+}
+
+export default function FirstSection(props) {
   const classes = useStyles()
 
   return (
-    <div className={classes.content}>
+    <Grid container className={classes.content}>
       <Grid item xs={12} md={6} className={classes.text}>
 
         <div className={classes.title}>
@@ -70,14 +90,14 @@ export default function FirstSection() {
           <p>A community that insires individuals to be the best versions of themselves.</p>
         </div>
 
-        <div className={classes.button}>
+        <ScrollBottom {...props}>
           <Button variant="contained">GET STARTED</Button>
-        </div>
+        </ScrollBottom>
 
       </Grid>
       <Grid item xs={12} md={6} className={classes.image}>
         <img src={Phones} alt="Phones" className={classes.img}/>
       </Grid>
-    </div>
+    </Grid>
   )
 }

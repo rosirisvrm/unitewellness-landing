@@ -1,5 +1,5 @@
 import React from 'react'
-import { Typography, makeStyles, Grid } from '@material-ui/core'
+import { Typography, makeStyles, Grid, Toolbar } from '@material-ui/core'
 import Form from '../Form'
 import ContactItem from '../ContactItem'
 
@@ -27,6 +27,9 @@ const useStyles = makeStyles(theme => ({
       margin: '25px 0px',
     }
   },
+  toolbar: {
+    padding: 0,
+  }
 }))
 
 export default function ContactSection() {
@@ -45,6 +48,8 @@ export default function ContactSection() {
 
   return (
       <Grid container className={classes.content}>
+        <Toolbar id="back-to-bottom-anchor" className={classes.toolbar}/>
+
         <Grid item xs={12} md={6}>
             <div className={classes.leftTitle}>
               <Typography variant='subtitle1'>We can't spell UniteWellness without U</Typography>
