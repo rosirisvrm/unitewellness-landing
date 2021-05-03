@@ -27,18 +27,86 @@ const useStyles = makeStyles(theme => ({
       margin: 0,
       color: '#FFFFFF',
       font: 'normal normal 400 40px/50px Montserrat',
+      textTransform: 'uppercase',
       [theme.breakpoints.down('sm')]: {
        fontSize: '32px',
       },
+    },
+    display: 'flex',
+    flexDirection: 'column',
+    color: '#FFFFFF',
+    fontSize: '20px',
+    lineHeight: '40px',
+    margin: '40px 40px 0px 60px',
+    textTransform: 'uppercase',
+    [theme.breakpoints.down('md')]: {
+     fontSize: '16px',
+     margin: '40px 40px 0px 100px',
+    },
+    [theme.breakpoints.down('sm')]: {
+     fontSize: '16px',
+     margin: '0px 20px 0px 0px',
+    },
+    '& h1': {
+      margin: 0,
+    },
+  },
+  titleInitial: {
+    '& h2': {
+      margin: 0,
+      color: '#FFFFFF',
+      font: 'normal normal 400 40px/50px Montserrat',
+      textTransform: 'uppercase',
+      [theme.breakpoints.down('sm')]: {
+       fontSize: '32px',
+      },
+    },
+    display: 'flex',
+    flexDirection: 'column',
+    color: '#FFFFFF',
+    fontSize: '20px',
+    lineHeight: '40px',
+    margin: '40px 40px 0px 60px',
+    textTransform: 'uppercase',
+    [theme.breakpoints.down('md')]: {
+     fontSize: '16px',
+     margin: '40px 40px 0px 0px',
+    },
+    [theme.breakpoints.down('sm')]: {
+     fontSize: '16px',
+     margin: '0px 20px 0px 0px',
+    },
+    '& h1': {
+      margin: 0,
     },
   },
   paragraph: {
     '& p': {
       font: 'normal normal 200 18px/24px Montserrat',
       color: '#FFFFFF',
-      margin: '25px 0px',
-      [theme.breakpoints.down('xs')]: {
+      margin: '60px',
+      [theme.breakpoints.down('md')]: {
+        fontSize: 14,
+        margin: '20px 30px 0px 100px',
+      },
+      [theme.breakpoints.down('sm')]: {
        fontSize: 14,
+       margin: '20px 30px 30px 0px',
+      },
+    }
+  },
+  paragraphInitial: {
+    '& p': {
+      font: 'normal normal 200 18px/24px Montserrat',
+      color: '#FFFFFF',
+      margin: '60px',
+      [theme.breakpoints.down('md')]: {
+        fontSize: 14,
+        margin: '20px 60px 0px 0px',
+      },
+      [theme.breakpoints.down('sm')]: {
+       fontSize: 14,
+       margin: '20px 30px 30px 0px',
       },
     }
   },
@@ -63,8 +131,8 @@ const useStyles = makeStyles(theme => ({
     },
   },
   img: {
-    width: '500px',
-    height: '425px',
+    width: '550px',
+    height: '475px',
     [theme.breakpoints.down('xs')]: {
       width: '300px',
       height: '225px',
@@ -87,9 +155,9 @@ export default function InfoSection({ textFirst, title, text1, text2 }) {
             className={classes.img}
           />
         </Grid>
-        <Grid item xs={12} md={6} className={classes.text}>
+        <Grid item xs={12} md={5} className={classes.text}>
           <div className={classes.title}>
-            <h2>{title}</h2>
+            <h1>{title}</h1>
           </div>
           <div className={classes.paragraph}>
             <p>{text1}</p>
@@ -99,11 +167,11 @@ export default function InfoSection({ textFirst, title, text1, text2 }) {
       </>)}
 
       {textFirst && (<>
-        <Grid item xs={12} md={6} className={classes.text}>
-          <div className={classes.title}>
-            <h2>{title}</h2>
+        <Grid item xs={12} md={5} className={classes.text}>
+          <div className={classes.titleInitial}>
+            <h1>{title}</h1>
           </div>
-          <div className={classes.paragraph}>
+          <div className={classes.paragraphInitial}>
             <p>{text1}</p>
             <p>{text2}</p>
           </div>

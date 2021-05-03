@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'center',
     backgroundColor: theme.palette.primary.main,
     backgroundImage: `url(${Gradiente})`,
-    backgroundRepeat: 'repeat-y',
+    backgroundRepeat: 'round',
   },
 }))
 
@@ -27,20 +27,20 @@ export default function Landing() {
   const infoSection = [
     {
       title: 'Fitness',
-      text1: 'United Wellness creates a community that inspires individuals to be the best version of themselves, by empowering people to take control of their lives.',
-      text2: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
+      text1: 'Your goal is to take your body to its best potential. Learn from fitness professionals new workouts from the of your surroundings.',
+      text2: '',
       textFirst: false,
     },
     {
       title: 'Nutrition',
-      text1: 'United Wellness creates a community that inspires individuals to be the best version of themselves, by empowering people to take control of their lives.',
-      text2: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
+      text1: 'Your goal is to take your nutritional health seriously. Learn new ways from our experts to take the stress out of cooking.',
+      text2: '',
       textFirst: true,
     },
     {
       title: 'Mental Well Being',
-      text1: 'United Wellness creates a community that inspires individuals to be the best version of themselves, by empowering people to take control of their lives.',
-      text2: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.',
+      text1: 'Do you want to take back the reigns on your life? Our Coaches will help you reduce stress and refocus your mindset.',
+      text2: '',
       textFirst: false,
     }
   ]

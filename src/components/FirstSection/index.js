@@ -25,12 +25,14 @@ const useStyles = makeStyles(theme => ({
     },
   },
   title: {
+    display: 'flex',
+    flexDirection: 'column',
     color: '#FFFFFF',
-    fontSize: '40px',
-    lineHeight: '75px',
+    fontSize: '30px',
+    lineHeight: '60px',
     textTransform: 'uppercase',
     [theme.breakpoints.down('sm')]: {
-     fontSize: '32px',
+     fontSize: '25px',
     },
     '& h1': {
       margin: 0,
@@ -41,7 +43,7 @@ const useStyles = makeStyles(theme => ({
   },
   paragraph: {
     '& p': {
-      margin: '40px 0px',
+      margin: '40px 135px 40px 0px',
       font: 'normal normal 200 18px/30px Montserrat',
       color: '#FFFFFF',
       [theme.breakpoints.down('xs')]: {
@@ -103,7 +105,8 @@ export default function FirstSection(props) {
       <Grid item xs={12} md={6} className={classes.text}>
 
         <div className={classes.title}>
-          <h1><span>Live</span> Your Best Life</h1>
+          <h1><span>Live</span> Your</h1>
+          <h1>Best Life</h1>
         </div>
 
         <div className={classes.paragraph}>

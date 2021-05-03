@@ -35,6 +35,9 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down('xl')]: {
      justifyContent: 'center',
     },
+    [theme.breakpoints.down('sm')]: {
+     justifyContent: 'flex-start',
+    },
     padding: '20px 0px',
     '& .MuiTypography-subtitle1': {
       color: '#FFFFFF',

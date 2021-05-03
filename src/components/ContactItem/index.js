@@ -58,7 +58,7 @@ export default function ContactItem({ title, text }) {
 
       <Grid item xs={12} sm={2} className={classes.iconContainer}>
         <Fab color="secondary" aria-label="scroll back to top" className={classes.icon}>
-          <img src={title === 'Address' ? Location : Calling} alt={title} width='28px' height='28px' />
+          <img src={Location} alt={title} width='28px' height='28px' />
         </Fab>
       </Grid>
 

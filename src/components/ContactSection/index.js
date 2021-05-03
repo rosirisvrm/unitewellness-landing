@@ -25,7 +25,19 @@ const useStyles = makeStyles(theme => ({
       [theme.breakpoints.down('sm')]: {
        fontSize: '32px',
       },
-    }
+    },
+    display: 'flex',
+    flexDirection: 'column',
+    color: '#FFFFFF',
+    fontSize: '25px',
+    lineHeight: '60px',
+    [theme.breakpoints.down('sm')]: {
+     fontSize: '16px',
+     lineHeight: '40px',
+    },
+    '& h1': {
+      margin: 0,
+    },
   },
   paragraph: {
     display: 'flex',
@@ -51,23 +63,24 @@ export default function ContactSection() {
   const contactInfo = [
     {
       title: 'Adress',
-      text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.',
+      text: 'Menlo Park, California',
     },
-    {
+    /*{
       title: 'Phone',
       text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr.',
-    }
+    }*/
   ]
 
   return (
       <Grid container className={classes.content}>
         <Grid item xs={12} md={6}>
             <div className={classes.leftTitle}>
-              <Typography variant='subtitle1'>We can't spell UniteWellness without U</Typography>
+              <h1>We can't spell UniteWellness without U</h1>
+              {/*<Typography variant='subtitle1'>We can't spell UniteWellness without U</Typography>*/}
             </div>
 
             <div className={classes.paragraph}>
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+              <p>We're excited to get to know you. Please fill out your information to receive updates on our products and services.</p>
             </div>
 
             {contactInfo.length && contactInfo.map((elem, index) => (
