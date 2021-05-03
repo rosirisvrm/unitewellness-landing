@@ -71,6 +71,10 @@ const useStyles = makeStyles(theme => ({
   img: {
     width: '480px',
     height: '550px',
+    [theme.breakpoints.down('sm')]: {
+      width: '380px',
+      height: '450px',
+    },
     [theme.breakpoints.down('xs')]: {
       width: '280px',
       height: '350px',

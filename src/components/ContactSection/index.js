@@ -62,7 +62,7 @@ export default function ContactSection() {
 
   const contactInfo = [
     {
-      title: 'Adress',
+      title: 'Address',
       text: 'Menlo Park, California',
     },
     /*{

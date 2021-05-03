@@ -82,7 +82,7 @@ const useStyles = makeStyles(theme => ({
   },
   paragraph: {
     '& p': {
-      font: 'normal normal 200 18px/24px Montserrat',
+      font: 'normal normal 200 18px/30px Montserrat',
       color: '#FFFFFF',
       margin: '60px',
       [theme.breakpoints.down('md')]: {
@@ -97,7 +97,7 @@ const useStyles = makeStyles(theme => ({
   },
   paragraphInitial: {
     '& p': {
-      font: 'normal normal 200 18px/24px Montserrat',
+      font: 'normal normal 200 18px/30px Montserrat',
       color: '#FFFFFF',
       margin: '60px',
       [theme.breakpoints.down('md')]: {
@@ -107,6 +107,7 @@ const useStyles = makeStyles(theme => ({
       [theme.breakpoints.down('sm')]: {
        fontSize: 14,
        margin: '20px 30px 30px 0px',
+       font: 'normal normal 200 18px/24px Montserrat',
       },
     }
   },

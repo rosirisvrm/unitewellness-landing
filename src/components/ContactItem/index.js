@@ -16,6 +16,9 @@ const useStyles = makeStyles(theme => ({
   iconContainer: {
     display: 'flex',
     alignItems: 'center',
+    [theme.breakpoints.down('xs')]: {
+     justifyContent: 'center',
+    },
   },
   icon: {
     padding: 35,
@@ -37,6 +40,7 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down('xs')]: {
      marginLeft: 0,
      paddingTop: 15,
+     alignItems: 'center',
     },
     '& .MuiTypography-subtitle2': {
       font: 'normal normal normal 23px/30px Montserrat',
