@@ -1,6 +1,6 @@
 import React from 'react'
 import { Typography, makeStyles, Grid, Fab } from '@material-ui/core'
-import Calling from '../../images/Calling.svg'
+//import Calling from '../../images/Calling.svg'
 import Location from '../../images/Location.svg'
 
 const useStyles = makeStyles(theme => ({

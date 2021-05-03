@@ -1,5 +1,5 @@
 import React from 'react'
-import { Typography, makeStyles, Grid, Toolbar } from '@material-ui/core'
+import { makeStyles, Grid, Toolbar } from '@material-ui/core'
 import Form from '../Form'
 import ContactItem from '../ContactItem'
 
@@ -26,7 +26,6 @@ const useStyles = makeStyles(theme => ({
        fontSize: '32px',
       },
     },
-    display: 'flex',
     flexDirection: 'column',
     color: '#FFFFFF',
     fontSize: '25px',
