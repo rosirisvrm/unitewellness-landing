@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/unitewellness-landing/static/css/main.e6c13ad2.css",
+    "main.js": "/unitewellness-landing/static/js/main.f73508ac.js",
+    "static/media/streaming2.png": "/unitewellness-landing/static/media/streaming2.7bbbd89cbff3d47b73a6.png",
+    "static/media/streaming.png": "/unitewellness-landing/static/media/streaming.24eb459d43e8def49b99.png",
+    "static/media/streaming3.png": "/unitewellness-landing/static/media/streaming3.5785c94f38a3e63db9ab.png",
+    "static/media/phones.png": "/unitewellness-landing/static/media/phones.5d875b4680d7b9f1029e.png",
+    "static/media/gradiente2.png": "/unitewellness-landing/static/media/gradiente2.f5edab1e9bc841655303.png",
+    "static/media/logo-white.png": "/unitewellness-landing/static/media/logo-white.4c34f933e9c2adb37be1.png",
+    "index.html": "/unitewellness-landing/index.html",
+    "static/media/Location.svg": "/unitewellness-landing/static/media/Location.edf6f92ce9cb07f63f7e63506ce63237.svg",
+    "main.e6c13ad2.css.map": "/unitewellness-landing/static/css/main.e6c13ad2.css.map",
+    "main.f73508ac.js.map": "/unitewellness-landing/static/js/main.f73508ac.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.f73508ac.js"
+  ]
+}
